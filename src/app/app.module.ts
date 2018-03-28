@@ -1,16 +1,47 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
+import {HttpModule} from "@angular/http";
+import {Routes, RouterModule} from "@angular/router";
 import { AppComponent } from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { DesarrolloComponent } from './Desarrollo/desarrollo.component';
+import { AdministracionComponent } from './Administracion/administracion.component';
+import { SeguridadComponent } from './Seguridad/seguridad.component';
+import {
+  MatButtonModule,
+  MatMenuModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule,
+  MatSidenavModule
+} from '@angular/material';
+
+const appRoutes: Routes = [
+  {path:'', component: DesarrolloComponent},
+  {path:'administracion', component: AdministracionComponent},
+  {path:'seguridad', component: SeguridadComponent},
+];
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DesarrolloComponent,
+    AdministracionComponent,
+    SeguridadComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatSidenavModule,
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
