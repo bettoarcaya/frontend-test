@@ -41,6 +41,10 @@ export class DataService{
     return this.menuRows.sections[index].kpis;
   }
 
+  public getMenu(){
+    return this.menuRows.menu;
+  }
+
 
 }
 

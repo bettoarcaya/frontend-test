@@ -3,7 +3,12 @@
     
     <h2>Menú</h2>
     <hr>
-    <div class="item">
+    <div *ngFor="let item of menu">
+      <div class="item">
+        <a routerLink=""><h3>{{item}}</h3></a> 
+      </div>
+    </div>
+    <!--div class="item">
       <a routerLink=""><h3>Desarrollo</h3></a> 
     </div>
     <div class="item">
@@ -11,7 +16,7 @@
     </div>
     <div class="item">
       <a routerLink="seguridad"><h3>Seguridad</h3></a>
-    </div>
+    </div-->
 
   </mat-sidenav>
 
