@@ -16,7 +16,7 @@ section{
 }
 .kpis{
   width: 200px;
-  height: 100px;
+  height: 120px;
   border: 2px solid rgba(0, 0, 0, 0.5);
   background: #3f51b5;
   color: white;
@@ -27,11 +27,20 @@ section{
   text-align: left;
 }
 .kpis .limit{
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  width: 60px;
-  height: 40px;
+  width: 20px;
+  height: 30px;
   text-align: center;
   justify-content: center;
+}
+.kpis .info{
+  font-size: 25px;
+  margin-left: 15px;
+}
+.value{
+  text-align: center;
+  justify-content: top;
+  font-size: 25px;
+  margin-right: 40px;
 }
 
 .container h4{

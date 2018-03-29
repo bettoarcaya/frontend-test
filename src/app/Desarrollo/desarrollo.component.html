@@ -14,10 +14,12 @@
     <mat-grid-tile *ngFor="let kp of kpis">
       <mat-drawer-container class="kpis" autosize>
         <h4>{{kp.name}}</h4>
-        <div cols="2">
-          <p>{{kp.value}}</p>
-          <div class="limit">
-            <p>{{kp.limit}}{{kp.unit}}</p>
+        <div fxLayout fxLayoutAlign="center" class="info">
+          <div fxFlex="15%" class="value">
+            {{kp.value}}
+          </div>
+          <div fxFlex="35%" [style.border]= "(kp.value > kp.limit) ? '2px solid red' : '2px solid green'" class="limit">
+            {{kp.limit}}{{kp.unit}}
           </div>
         </div>
       </mat-drawer-container>
