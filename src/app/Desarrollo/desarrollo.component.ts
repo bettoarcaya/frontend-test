@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DesarrolloComponent implements OnInit {
   rows = [];
   kpis = [];
+  
   menuRows = {
     menu: ["Desarrollo", "Administración", "Seguridad"],
     sections: [
@@ -56,6 +57,10 @@ export class DesarrolloComponent implements OnInit {
         this.kpis = this.rows[i].kpis;
       }
     }
+  }
+
+  add(){
+    this.kpis.push(this.kpis[0]);
   }
 
 
