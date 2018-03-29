@@ -18,6 +18,8 @@ import {
 } from '@angular/material';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import {HttpClientModule} from '@angular/common/http';
+import {DataService} from "./servicios/data.service";
 
 const appRoutes: Routes = [
   {path:'', component: DesarrolloComponent},
@@ -45,9 +47,10 @@ const appRoutes: Routes = [
     HttpModule,
     MatGridListModule,
     RouterModule.forRoot(appRoutes),
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
