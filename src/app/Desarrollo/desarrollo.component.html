@@ -1,3 +1,27 @@
 <section>
   <h1>Desarrollo</h1>
+  <mat-grid-list cols="3" rowHeight="100px">
+
+    <mat-grid-tile (click)="clk(row.name)" *ngFor="let row of rows">
+      <mat-drawer-container class="container" autosize>
+        <h4>{{row.name}}</h4>
+      </mat-drawer-container>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+  <mat-grid-list cols="4" rowHeight="150px">
+    <mat-grid-tile *ngFor="let kp of kpis">
+      <mat-drawer-container class="kpis" autosize>
+        <h4>{{kp.name}}</h4>
+        <div cols="2">
+          <p>{{kp.value}}</p>
+          <div class="limit">
+            <p>{{kp.limit}}{{kp.unit}}</p>
+          </div>
+        </div>
+      </mat-drawer-container>
+    </mat-grid-tile>
+      
+  </mat-grid-list>
 </section>

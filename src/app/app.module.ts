@@ -16,6 +16,7 @@ import {
   MatCardModule,
   MatSidenavModule
 } from '@angular/material';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 const appRoutes: Routes = [
   {path:'', component: DesarrolloComponent},
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
     MatCardModule,
     MatSidenavModule,
     HttpModule,
+    MatGridListModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
