@@ -17,6 +17,7 @@ import {
   MatSidenavModule
 } from '@angular/material';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 const appRoutes: Routes = [
   {path:'', component: DesarrolloComponent},
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     MatSidenavModule,
     HttpModule,
     MatGridListModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
