@@ -10,6 +10,7 @@ export class DesarrolloComponent implements OnInit {
   rows = [];
   kpis = [];
   test = 4;
+  active;
 
   constructor(private data:DataService) { }
 
@@ -17,9 +18,11 @@ export class DesarrolloComponent implements OnInit {
     
     this.rows = this.data.getSections();
     this.kpis = this.data.getKpis(0);
+    this.active = this.rows[0].name;
   }
 
   clk(row){
+    this.active = row;
     for(let i = 0; i < this.rows.length; i++){
       if(this.rows[i].name == row){
         this.kpis = this.data.getKpis(i);
