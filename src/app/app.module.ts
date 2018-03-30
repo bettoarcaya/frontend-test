@@ -6,8 +6,6 @@ import {Routes, RouterModule} from "@angular/router";
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DesarrolloComponent } from './Desarrollo/desarrollo.component';
-import { AdministracionComponent } from './Administracion/administracion.component';
-import { SeguridadComponent } from './Seguridad/seguridad.component';
 import {
   MatButtonModule,
   MatMenuModule,
@@ -23,17 +21,13 @@ import {DataService} from "./servicios/data.service";
 
 const appRoutes: Routes = [
   {path:'', component: DesarrolloComponent},
-  {path:'administracion', component: AdministracionComponent},
-  {path:'seguridad', component: SeguridadComponent},
 ];
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DesarrolloComponent,
-    AdministracionComponent,
-    SeguridadComponent
+    DesarrolloComponent
   ],
   imports: [
     BrowserModule,
