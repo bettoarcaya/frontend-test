@@ -3,7 +3,7 @@
   <mat-grid-list cols="{{categories}}" rowHeight="100px">
 
     <mat-grid-tile (click)="clk(row.name)" *ngFor="let row of rows">
-      <mat-drawer-container [style.background]= "(row.name == active) ? 'gray' : 'white'" class="container">
+      <mat-drawer-container [style.background]="(row.name == active) ? 'gray' : 'white'" class="container">
         <h4>{{row.name}}</h4>
       </mat-drawer-container>
     </mat-grid-tile>
@@ -18,7 +18,7 @@
           <div fxFlex="15%" class="value">
             {{kp.value}}
           </div>
-          <div fxFlex="35%" [style.border]= "(kp.value > kp.limit) ? '2px solid red' : '2px solid green'" class="limit">
+          <div fxFlex="35%" [style.border]="(kp.value > kp.limit) ? '2px solid red' : '2px solid green'" class="limit">
             {{kp.limit}}{{kp.unit}}
           </div>
         </div>
