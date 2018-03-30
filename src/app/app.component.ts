@@ -9,6 +9,7 @@ import { DataService } from './servicios/data.service';
 export class AppComponent {
   title = 'app';
   menu;
+  flag;
 
   public constructor(private data:DataService){}
   ngOnInit(){

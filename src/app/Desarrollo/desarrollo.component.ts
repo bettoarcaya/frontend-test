@@ -9,8 +9,10 @@ import { DataService } from '../servicios/data.service';
 export class DesarrolloComponent implements OnInit {
   rows = [];
   kpis = [];
-  test = 4;
+  kps = 4;
+  categories = 4;
   active;
+  menu = false;
 
   constructor(private data:DataService) { }
 
@@ -37,20 +39,25 @@ export class DesarrolloComponent implements OnInit {
   onResize(event){
     const element = event.target.innerWidth;
 
-    if (element < 950) {
-      this.test = 3;
+    if (element > 950) {
+      this.kps = 4;
+      this.categories = 4;
     }
 
-    if (element > 950) {
-      this.test = 4;
+    if (element < 950) {
+      this.kps = 3;
+      this.categories = 3;
     }
 
     if (element < 750) {
-      this.test = 2;
+      this.kps = 2;
+      this.categories = 2;
     }
 
     if (element < 650) {
-      this.test = 1;
+      this.kps = 1;
+      this.categories = 1;
+      this.menu = true;
     }
   }
 
