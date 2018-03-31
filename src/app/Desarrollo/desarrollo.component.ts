@@ -12,7 +12,6 @@ export class DesarrolloComponent implements OnInit {
   kps = 4;
   categories = 4;
   active;
-  menu = false;
 
   constructor(private data:DataService) { }
 
@@ -57,7 +56,6 @@ export class DesarrolloComponent implements OnInit {
     if (element < 650) {
       this.kps = 1;
       this.categories = 1;
-      this.menu = true;
     }
   }
 
